@@ -1,0 +1,25 @@
+def vector_mult(x,a):
+ """
+ This function takes in a list x with a scalar a, and for each element in x, multiplies the element by a and stores it in a new list b. function returns the list b.
+ """
+  b = []
+  for i in range(len(x)):
+    b.append(x[i] * a)
+    #takes the vector x and multiplies it with scalar a and adds it to the end of list b which is empty
+  return b
+  # vector_mult takes a scalar and a vector and returns the corresponding scalar-vector multiply. 
+  
+  
+  def infNorm(vector):
+    norm = vector[0]
+    for element in vector:
+        if norm < abs(element):
+            norm = abs(element)
+    return norm
+
+def normalize(vector):
+    norm = infNorm(vector)
+    new_vector = []
+    for element in vector:
+        new_vector.append((1.0/norm)*element)
+    return new_vector
