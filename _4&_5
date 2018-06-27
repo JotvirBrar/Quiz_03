@@ -1,0 +1,15 @@
+def infNorm(vector):
+  norm = vector[0]
+  for element in vector:
+      if norm < abs(element):
+        norm = abs(element)
+  return norm
+def normalize(vector):
+  norm = infNorm(vector)
+  new_vector = []
+  for element in vector:
+    new_vector.append((1.0/norm)*element)
+  return new_vector
+
+testvec = [3,6,9,-60]
+print(normalize(testvec))
