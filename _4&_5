@@ -1,15 +1,35 @@
+"""
+The purpose of these functions is first to find the Infinity Norm of a vector and second to normalize it with respect to the Infinity Norm. The Infinty Norm being the maximum absolute value of the vector's components.
+"""
 def infNorm(vector):
-  norm = vector[0]
+  """
+  I use this function to find the infinity norm of a vector. Using a for loop, infNorm iterates through each component of the vector to take the absolute value and then an inner if statement to compare each component to find the largest value. The function should return the largest absolute value in the vector.
+  The input should be a 1 x n vector.
+
+  """
+  norm = vector[0] 
   for element in vector:
+    #iterating through each element in vector
       if norm < abs(element):
         norm = abs(element)
+        #sets norm equal to the absolute value of the maximum component
   return norm
+
+vector = [1,2,3,-22]
+print(infNorm(vector))
+
 def normalize(vector):
+  """
+  normalize(vector) normalizes a vector with respect to the infinty norm. I utilize the infNorm function to calculate the maximum absoulute value and a for loop to iterate and use the 1/norm*element. The function should return the normalization with respect to the infinity norm in the form of a 1 x n vector.
+  """  
   norm = infNorm(vector)
   new_vector = []
+  #new_vector will be the list that holds the normalization of vector
   for element in vector:
+    #iterates through each element in vector
     new_vector.append((1.0/norm)*element)
+    #applying the formula to normalize each element in the vector and add it to new_vector
   return new_vector
 
-testvec = [3,6,9,-60]
+testvec = [1,2,3,-22]
 print(normalize(testvec))
