@@ -1,1 +1,14 @@
+def dot(vector01, vector02):
+  """
+  This function takes in two vectors and returns the dot product of them. The output should be a scalar. vector01 and vector 02 should both be 1 x n vectors.
+  """
+  ans = 0
+  #initializing an array
+  for i in range(len(vector01)):
+    ans += vector01[i]*vector02[i]
+    #iterates through each of the elements in the vectors and adds them up and puts them into ans
+  return ans
+vector01 = [1,2,3]
+vector02 = [4,5,6]
+print(dot(vector01,vector02))
 
