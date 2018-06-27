@@ -1,0 +1,17 @@
+def vector_mult(x,a):
+  """
+ This function takes in a list x with a scalar a, and for each element in x, multiplies the element by a and stores it in a new list b. function returns the list b.
+ """
+  b = []
+  for i in range(len(x)):
+    b.append(x[i] * a)
+    #takes the vector x and multiplies it with scalar a and adds it to the end of list b which is empty
+  return b
+  # vector_mult takes a scalar and a vector and returns the corresponding scalar-vector multiply. 
+
+
+a = 2      
+x = [3,4,5]
+#x = 2
+#a = [3,4,5]
+print(vector_mult(x,a))
