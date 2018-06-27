@@ -1,1 +1,12 @@
+def vecSubtract(vector01, vector02):
+  """
+  This function takes in two vectors and does vector subraction to calculate the new vector. I used a for loop in a tuple to return the subtracted vector.
+  """
+    result = [vector01[i] - vector02[i] for i in range(min(len(vector01), len(vector02)))]
+    #iterates through each element in vector01 and vector02 and subracts them.
+    return result
 
+vector01 = [3, 3, 3]
+vector02 = [4, 4, 4]
+
+print(vecSubtract(vector01,vector02))
